@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 15px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  margin: 0;
+}
+
+h6 {
+  margin: 0;
+}
+
+h1,
+h6 {
+  font-family: Shrikhand, Roboto, sans-serif;
+}
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 100px;
+}
+
+
+
+/***** Partie 1 Recherche *****/
+
+
+
+/***** Partie 2 Fonctionnement *****/
+
+/***** Partie 3 Resto *****/
+
+
+
+/***** Footer *****/
+footer {
+  background-color: #353535;
+}
+
+footer h3 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 20px;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+footer ul {
+  list-style-type: none;
+}
