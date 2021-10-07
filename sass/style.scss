@@ -1,0 +1,240 @@
+//Code couleur
+
+$color1-purple: #9356dc;
+
+$color2-pink: #ff79da;
+
+$color3-green: #99e2d0;
+
+$linear-gradient: linear-gradient(to bottom right, #ff79da, #9356dc);
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-family: Shrikhand, Roboto, sans-serif;
+}
+
+// @MIXIN **********************************************
+
+@mixin btn-gradient {
+  background: $linear-gradient;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px #aaa;
+  cursor: pointer;
+}
+
+@mixin card {
+  border-radius: 25px;
+  box-shadow: 4px 4px 6px #aaa;
+  margin: 20px;
+  background: #fff;
+  padding-bottom: 10px;
+}
+
+@mixin card-img {
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+  width: 100%;
+  height: 100%;
+  max-height: 220px;
+}
+
+/***** Partie 1 Recherche *****/
+
+.header__title {
+  text-align: center;
+}
+
+.recherche {
+  border: none;
+  background: #fbfbfb;
+  text-align: center;
+
+  .recherche--haut {
+    background: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 5px 5px 0px #dddddd;
+
+    input {
+      box-shadow: inset 0px 5px 5px 0px #dddddd;
+      background: #eaeaea;
+      padding: 20px;
+
+      border: transparent;
+    }
+  }
+
+  .recherche--bas {
+    margin: 20px;
+    text-align: center;
+    padding: 0 50px 50px;
+  }
+}
+
+.commander {
+  @include btn-gradient;
+}
+
+/***** Partie 2 Fonctionnement *****/
+
+.fonctionnement {
+  h2 {
+    text-align: center;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px;
+    margin: 15px 20px 15px 30px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 8px 2px #c4c4c4;
+    background-color: #f5f5f5;
+  }
+
+  li:hover {
+    background: #f2eafb;
+    transform: scale(1.01);
+  }
+
+  p {
+    font-weight: 500;
+    margin-left: 20px;
+  }
+}
+
+.fonctionnement__groupe--chiffre {
+  background: $color1-purple;
+  color: #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  right: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fonctionnement__groupe--icon {
+  color: grey;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+/***** Partie 3 Resto *****/
+
+.resto {
+  h2 {
+    text-align: center;
+  }
+}
+
+.card-resto {
+  @include card;
+
+  h3 {
+    padding: 10px;
+    margin: 0px;
+  }
+
+  span {
+    padding: 10px;
+  }
+}
+
+.card-resto img {
+  @include card-img;
+}
+
+/***** Footer *****/
+footer {
+  background-color: #353535;
+  padding: 10px;
+
+  color: whitesmoke;
+
+  h3 {
+    font-family: "Shrikhand", "sans-serif";
+    padding: 5px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  li {
+    padding: 5px 0 5px 0;
+
+    a {
+      color: white;
+    }
+  }
+
+  .fa-utensils {
+    margin-right: 12px;
+  }
+
+  .fa-hands-helping {
+    margin-right: 5px;
+  }
+}
+
+// CSS TOUTES LES PAGES **********************************************
+
+.main__img {
+  width: 100%;
+  height: 300px;
+}
+
+.main__menu {
+  background-color: rgb(241, 241, 241);
+}
+
+.menu__title {
+  font-family: Shrikhand, sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-ligne {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #aaa;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-ligne h4 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.ligne__dessous {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
