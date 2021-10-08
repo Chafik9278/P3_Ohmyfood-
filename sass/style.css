@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
-  margin: 30px;
+  margin: 50px;
 }
 
 a {
@@ -28,16 +28,19 @@ h1 {
 }
 
 .recherche .recherche--haut {
-  background: #eaeaea;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #eaeaea;
   -webkit-box-shadow: inset 0px 5px 5px 0px #dddddd;
           box-shadow: inset 0px 5px 5px 0px #dddddd;
 }
@@ -56,7 +59,7 @@ h1 {
   padding: 0 50px 50px;
 }
 
-.commander {
+.btn__explo {
   background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   border: 1px solid transparent;
@@ -69,29 +72,27 @@ h1 {
   cursor: pointer;
 }
 
+.btn__explo:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-box-shadow: 4px 4px 6px #000;
+          box-shadow: 4px 4px 6px #000;
+}
+
 /***** Partie 2 Fonctionnement *****/
 .fonctionnement h2 {
-  text-align: center;
+  margin-left: 30px;
 }
 
 .fonctionnement li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  padding: 20px;
-  margin: 15px 20px 15px 30px;
+  padding: 15px;
+  margin: 15px 1px 10px 1px;
   border-radius: 20px;
   -webkit-box-shadow: 1px 2px 8px 2px #c4c4c4;
           box-shadow: 1px 2px 8px 2px #c4c4c4;
@@ -120,12 +121,15 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .fonctionnement__groupe--icon {
@@ -136,7 +140,7 @@ h1 {
 
 /***** Partie 3 Resto *****/
 .resto h2 {
-  text-align: center;
+  margin-left: 20px;
 }
 
 .card-resto {
@@ -146,6 +150,7 @@ h1 {
   margin: 20px;
   background: #fff;
   padding-bottom: 10px;
+  position: relative;
 }
 
 .card-resto h3 {
@@ -166,6 +171,41 @@ h1 {
   max-height: 220px;
 }
 
+.nouveau {
+  width: 100px;
+  height: 15px;
+  text-align: center;
+  color: #008766;
+  background: #99e2d0;
+  border-radius: 5px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-weight: 500;
+}
+
+.enligne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 10px;
+}
+
+.far {
+  font-size: 30px;
+  padding: 20px;
+}
+
+.decaler {
+  margin: 0 10px;
+}
+
 /***** Footer *****/
 footer {
   background-color: #353535;
@@ -175,8 +215,8 @@ footer {
 
 footer h3 {
   font-family: "Shrikhand", "sans-serif";
-  padding: 5px;
-  font-size: 30px;
+  padding-left: 40px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -196,6 +236,22 @@ footer .fa-hands-helping {
   margin-right: 5px;
 }
 
+.header__titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__titre h1 {
+  margin-right: 100px;
+}
+
 .main__img {
   width: 100%;
   height: 300px;
@@ -206,17 +262,17 @@ footer .fa-hands-helping {
 }
 
 .menu__title {
-  font-family: Shrikhand, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: Shrikhand, sans-serif;
+  padding: 0 10px;
 }
 
 .menu-ligne {
@@ -244,5 +300,58 @@ footer .fa-hands-helping {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.entrees__titre {
+  margin-left: 10px;
+}
+
+.ligne-verte {
+  width: 40px;
+  border: 2px solid #99e2d0;
+  margin-left: 10px;
+}
+
+.encoche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #99e2d0;
+  width: 50px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.btn__com {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+          box-shadow: 5px 5px 5px #aaa;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  margin: 10px 100px 10px 100px;
+}
+
+.btn__com:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-box-shadow: 4px 4px 6px #000;
+          box-shadow: 4px 4px 6px #000;
 }
 /*# sourceMappingURL=style.css.map */

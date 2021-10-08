@@ -1,153 +1,185 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="sass/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Fontawsome-->
+  <link rel="stylesheet" href="sass/style.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
+  <!-- Fontawsome-->
 
-    <!-- Police Shrikhand -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
-    <!-- Police ROBOTO -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Police Shrikhand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
 
-    <title>Ohmyfood!</title>
-  </head>
+  <!-- Police ROBOTO -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <header>
-      <h1 class="header__title"><a href="../index.html">Ohmyfood</a></h1>
+  <title>Ohmyfood!</title>
+</head>
 
-      <!-- Partie 1 Recherche -->
-      <div class="recherche">
-        <div class="recherche--haut">
-          <i class="fas fa-map-marker-alt"></i>
-          <input type="text" value="Paris,Belleville" />
+<body>
+  <header>
+    <h1 class="header__title"><a href="../index.html">Ohmyfood</a></h1>
 
-        </div>
-      
-        <div class="recherche--bas">
-          <h2>Réservez le menu qui vous convient</h2>
-          <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-          <button class="commander">Explorer nos restaurants</button>
+    <!-- Partie 1 Recherche -->
+    <div class="recherche">
+      <div class="recherche--haut">
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="text" value="Paris,Belleville" />
 
-        </div>
-     
       </div>
-    </header>
 
-    <main>
-      <!-- Partie 2 Fonctionnement -->
+      <div class="recherche--bas">
+        <h2>Réservez le menu qui vous convient</h2>
+        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+        <button class="btn__explo">Explorer nos restaurants</button>
 
-      <section class="fonctionnement">
-        <h2>Fonctionnement</h2>
+      </div>
 
-        <ul class="fonctionnement__groupe">
-          <li>
-            <div class="fonctionnement__groupe--chiffre">1</div>
-            <div>
-              <i class="fas fa-mobile-alt fonctionnement__groupe--icon"></i>
-            </div>
-            <p>Choisissez un restaurant</p>
-          </li>
-          <li>
-            <div class="fonctionnement__groupe--chiffre">2</div>
-            <div>
-              <i class="fas fa-list-ul fonctionnement__groupe--icon"></i>
-            </div>
-            <p>Composez votre menu</p>
-          </li>
-          <li>
-            <div class="fonctionnement__groupe--chiffre">3</div>
-            <div><i class="fas fa-store fonctionnement__groupe--icon"></i></div>
-            <p>Dégustez au restaurant</p>
-          </li>
-        </ul>
-      </section>
+    </div>
+  </header>
 
-      <!-- Partie 3 Resto -->
+  <main>
+    <!-- Partie 2 Fonctionnement -->
 
-      <section class="resto">
-        <h2>Restaurants</h2>
+    <section class="fonctionnement">
+      <h2>Fonctionnement</h2>
 
-        <div class="card-resto">
-          <img
-            src="public/images/restaurants/1_La palette du gout.jpg"
-            alt="menu palette du gout"
-          />
-          <h3>La palette du gout</h3>
-          <span> Ménilmontant</span>
-          <i class="fas fa-heart"></i>
-
-          <i class="far fa-heart"></i>
-        </div>
-
-        <div class="card-resto">
-          <img
-            src="public/images/restaurants/2_La note enchantée.jpg"
-            alt="menu note enchantée"
-          />
-          <h3>La note enchantée</h3>
-          <span> Charonne</span>
-          <i class="far fa-heart"></i>
-        </div>
-
-        <div class="card-resto">
-          <img
-            src="public/images/restaurants/3_A la française.jpg"
-            alt="menu a la francaise"
-          />
-          <h3>A la française</h3>
-          <span> Cité Rouge</span>
-          <i class="far fa-heart"></i>
-        </div>
-
-        <div class="card-resto">
-          <img
-            src="public/images/restaurants/4_Le délice des sens.jpg"
-            alt="menu delice des sens"
-          />
-          <h3>Le délice des sens</h3>
-          <span> Folie-Méricourt</span>
-          <i class="far fa-heart"></i>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <h3>ohmyfood</h3>
-      <ul>
+      <ul class="fonctionnement__groupe">
         <li>
-          <a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a>
+          <div class="fonctionnement__groupe--chiffre">1</div>
+          <div>
+            <i class="fas fa-mobile-alt fonctionnement__groupe--icon"></i>
+          </div>
+          <p>Choisissez un restaurant</p>
         </li>
         <li>
-          <a href="#"
-            ><i class="fas fa-hands-helping"></i> Devenir partenaire</a
-          >
+          <div class="fonctionnement__groupe--chiffre">2</div>
+          <div>
+            <i class="fas fa-list-ul fonctionnement__groupe--icon"></i>
+          </div>
+          <p>Composez votre menu</p>
         </li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="mailto:ohmyfood-contact@gmail.com">Contact</a></li>
+        <li>
+          <div class="fonctionnement__groupe--chiffre">3</div>
+          <div><i class="fas fa-store fonctionnement__groupe--icon"></i></div>
+          <p>Dégustez au restaurant</p>
+        </li>
       </ul>
-    </footer>
-  </body>
+    </section>
+
+    <!-- Partie 3 Resto -->
+
+    <section class="resto">
+      <h2>Restaurants</h2>
+
+      <div class="card-resto">
+        <a href="/Pages/lapalette-dugout.html">
+          <img src="public/images/restaurants/1_La palette du gout.jpg" alt="menu palette du gout" />
+
+          <div>
+            <span class="nouveau"> Nouveau </span>
+          </div>
+
+          <div class="enligne">
+            <h3>La palette du gout</h3>
+
+            <i class="fas fa-heart"></i>
+            <i class="far fa-heart"></i>
+
+          </div>
+
+          <span class="decaler"> Ménilmontant</span>
+
+        </a>
+
+      </div>
+
+      <div class="card-resto">
+
+        <a href="/Pages/la-noteenchantée.html">
+
+
+          <img src="public/images/restaurants/2_La note enchantée.jpg" alt="menu note enchantée" />
+          <div>
+            <span class="nouveau"> Nouveau </span>
+          </div>
+
+          <div class="enligne">
+            <h3>La note enchantée</h3>
+
+            <i class="far fa-heart"></i>
+          </div>
+
+          <span class="decaler"> Charonne</span>
+        </a>
+      </div>
+
+      <div class="card-resto">
+        <a href="/Pages/à-lafrancaise.html">
+
+          <img src="public/images/restaurants/3_A la française.jpg" alt="menu a la francaise" />
+          <div>
+            <span class="nouveau"> Nouveau </span>
+          </div>
+          <div class="enligne">
+
+            <h3>A la française</h3>
+
+            <i class="far fa-heart"></i>
+        </a>
+      </div>
+
+
+      <span class="decaler"> Cité Rouge</span>
+      </div>
+
+      <div class="card-resto">
+
+        <a href="/Pages/delice-dessens.html">
+
+          <img src="public/images/restaurants/4_Le délice des sens.jpg" alt="menu delice des sens" />
+          <div>
+            <span class="nouveau"> Nouveau </span>
+          </div>
+
+          <div class="enligne">
+
+            <h3>Le délice des sens</h3>
+
+            <i class="far fa-heart"></i>
+       
+      </div>
+
+      <span class="decaler"> Folie-Méricourt</span>
+    </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <h3>ohmyfood</h3>
+    <ul>
+      <li>
+        <a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
+      </li>
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="mailto:ohmyfood-contact@gmail.com">Contact</a></li>
+    </ul>
+  </footer>
+</body>
+
 </html>
