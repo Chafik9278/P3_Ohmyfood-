@@ -56,8 +56,12 @@ h1 {
   margin: 20px;
   background: #fff;
   padding-bottom: 10px;
-
   position: relative;
+
+  &:hover {
+    transform: scale(1.01);
+    background-color: whitesmoke;
+  }
 }
 
 @mixin card-img {
@@ -80,8 +84,7 @@ h1 {
   text-align: center;
 
   .recherche--haut {
-
-    @include display ;
+    @include display;
     justify-content: center;
     background: #eaeaea;
     box-shadow: inset 0px 5px 5px 0px #dddddd;
@@ -114,8 +117,8 @@ h1 {
   }
 
   li {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
     padding: 15px;
     margin: 15px 1px 10px 1px;
     border-radius: 20px;
@@ -143,8 +146,8 @@ align-items: center;
   position: relative;
   right: 30px;
 
- @include display();
- justify-content :center;
+  @include display();
+  justify-content: center;
 }
 
 .fonctionnement__groupe--icon {
@@ -192,10 +195,8 @@ align-items: center;
 }
 
 .enligne {
-
   @include display;
 
- 
   margin: 0 10px;
 }
 
@@ -242,15 +243,13 @@ footer {
 // CSS TOUTES LES PAGES **********************************************
 
 .header__titre {
-
   @include display();
- 
- 
 
   h1 {
     margin-right: 100px;
   }
 }
+
 .main__img {
   width: 100%;
   height: 300px;
@@ -261,7 +260,6 @@ footer {
 }
 
 .menu__title {
-
   @include display();
   font-family: Shrikhand, sans-serif;
   padding: 0 10px;
@@ -282,7 +280,7 @@ footer {
 }
 
 .ligne__dessous {
- @include display();
+  @include display();
 }
 
 .entrees__titre {
@@ -295,8 +293,7 @@ footer {
   margin-left: 10px;
 }
 
-.encoche{
-
+.encoche {
   @include display();
   justify-content: center;
 
@@ -305,15 +302,74 @@ footer {
   height: 63px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-
-
-  }
-
-
+}
 
 .btn__com {
   @include btn__explo;
   width: 200px;
   height: 50px;
   margin: 10px 100px 10px 100px;
+}
+
+// Media querys@**************************************
+
+@media screen and (min-width: 768px) {
+  .fonctionnement h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .fonctionnement__groupe {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin-right: 40px;
+      background-color: whitesmoke;
+    }
+  }
+
+  .resto h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .resto__groupe {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-resto {
+    width: 40%;
+    height: 350px;
+  }
+
+  footer {
+    text-align: center;
+    background-color: whitesmoke;
+
+    h3 {
+      color: black;
+      font-size: 40px;
+      margin: 0;
+    }
+
+    li {
+      a {
+        color: black;
+        font-size: 20px;
+      }
+
+      a:hover {
+        color: $color2-pink;
+        font-size: 22px;
+      }
+    }
+  }
 }

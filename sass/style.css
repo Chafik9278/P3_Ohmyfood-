@@ -153,6 +153,12 @@ h1 {
   position: relative;
 }
 
+.card-resto:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  background-color: whitesmoke;
+}
+
 .card-resto h3 {
   padding: 10px;
   margin: 0px;
@@ -353,5 +359,70 @@ footer .fa-hands-helping {
           transform: scale(1.01);
   -webkit-box-shadow: 4px 4px 6px #000;
           box-shadow: 4px 4px 6px #000;
+}
+
+@media screen and (min-width: 768px) {
+  .fonctionnement h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+  }
+  .fonctionnement__groupe {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fonctionnement__groupe li {
+    margin-right: 40px;
+    background-color: whitesmoke;
+  }
+  .resto h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+  }
+  .resto__groupe {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card-resto {
+    width: 40%;
+    height: 350px;
+  }
+  footer {
+    text-align: center;
+    background-color: whitesmoke;
+  }
+  footer h3 {
+    color: black;
+    font-size: 40px;
+    margin: 0;
+  }
+  footer li a {
+    color: black;
+    font-size: 20px;
+  }
+  footer li a:hover {
+    color: #ff79da;
+    font-size: 22px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
