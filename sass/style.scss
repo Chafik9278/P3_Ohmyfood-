@@ -1,4 +1,4 @@
-//Code couleur
+//Code couleur*************
 
 $color1-purple: #9356dc;
 
@@ -8,6 +8,11 @@ $color3-green: #99e2d0;
 
 $linear-gradient: linear-gradient(to bottom right, #ff79da, #9356dc);
 
+
+
+//Style Css Generale*************
+//Style Css Generale*************
+//Style Css Generale*************
 
 
 body {
@@ -28,7 +33,12 @@ h1 {
   font-family: Shrikhand, Roboto, sans-serif;
 }
 
+
+
 // @MIXIN **********************************************
+// @MIXIN **********************************************
+// @MIXIN **********************************************
+
 
 @mixin display {
   display: flex;
@@ -74,7 +84,6 @@ h1 {
   max-height: 220px;
 }
 
-
 @mixin menu-ligne {
   background-color: #fff;
   border-radius: 15px;
@@ -93,13 +102,12 @@ h1 {
   }
 
   &:hover .encoche {
-
     opacity: 1;
     transform: translate(0px);
   }
 
   &:hover .fa-check-circle {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -107,7 +115,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   width: 50px;
   height: 60px;
   border-radius: 0px 15px 15px 0px;
@@ -125,18 +133,27 @@ h1 {
   }
 }
 
+@mixin main-menu {
+  background-color: #f6f6f6;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  position: relative;
+  margin-top: -50px;
+}
+
+/***** Partie 1 Recherche *****/
+/***** Partie 1 Recherche *****/
 /***** Partie 1 Recherche *****/
 
 .header__title {
   text-align: center;
-
 }
 
 .recherche {
   border: none;
   background: #fbfbfb;
   text-align: center;
-
 
   .recherche--haut {
     @include display;
@@ -148,7 +165,6 @@ h1 {
       box-shadow: inset 0px 5px 5px 0px #dddddd;
       background: #eaeaea;
       padding: 20px;
-
       border: transparent;
     }
   }
@@ -165,6 +181,9 @@ h1 {
 }
 
 /***** Partie 2 Fonctionnement *****/
+/***** Partie 2 Fonctionnement *****/
+/***** Partie 2 Fonctionnement *****/
+
 
 .fonctionnement {
   h2 {
@@ -182,19 +201,14 @@ h1 {
 
     &:hover {
       background: #f2eafb;
-      transform: scale(1.01);
+      transform: scale(105%);
       color: #9356dc;
 
       i {
         color: #9356dc;
       }
     }
-
-
-
   }
-
-
 
   p {
     font-weight: 500;
@@ -221,6 +235,8 @@ h1 {
   margin-left: 20px;
 }
 
+/***** Partie 3 Resto *****/
+/***** Partie 3 Resto *****/
 /***** Partie 3 Resto *****/
 
 .resto {
@@ -266,6 +282,14 @@ h1 {
 }
 
 
+/***** Partie COEUR *****/
+/***** Partie COEUR *****/
+/***** Partie COEUR *****/
+
+.coeur {
+
+
+}
 .fa-heart {
   font-size: 30px;
   color: black;
@@ -273,13 +297,8 @@ h1 {
 
   &:hover {
     background: linear-gradient(to left, #b35cdc, #e86edb, #ff79da);
-
-
   }
-
-
 }
-
 
 
 .decaler {
@@ -287,6 +306,10 @@ h1 {
 }
 
 /***** Footer *****/
+/***** Footer *****/
+/***** Footer *****/
+
+
 footer {
   background-color: #353535;
   padding: 10px;
@@ -317,6 +340,12 @@ footer {
   }
 }
 
+
+
+
+
+// CSS TOUTES LES PAGES **********************************************
+// CSS TOUTES LES PAGES **********************************************
 // CSS TOUTES LES PAGES **********************************************
 
 .header__titre {
@@ -324,17 +353,17 @@ footer {
 
   h1 {
     margin-right: 100px;
-
   }
 }
 
 .main__img {
   width: 100%;
   height: 300px;
+  object-fit: cover;
 }
 
 .main__menu {
-  background-color: rgb(241, 241, 241);
+  @include main-menu;
 }
 
 .menu__title {
@@ -343,10 +372,8 @@ footer {
   padding: 0 10px;
 }
 
-
 .entrees__titre {
   margin-left: 10px;
-
 }
 
 .ligne-verte {
@@ -356,8 +383,6 @@ footer {
 }
 
 
-
-
 .menu-ligne {
   @include menu-ligne();
 }
@@ -365,7 +390,6 @@ footer {
 .menu-ligne h4 {
   margin: 0px;
   padding: 0px;
-
 }
 
 .ligne__dessous {
@@ -376,34 +400,63 @@ footer {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-
-
   }
 
   span {
     margin-right: 5px;
-
   }
-
-
 }
 
 .encoche {
   @include encoche;
-
 }
 
-
+.aligne-btn {
+  text-align: center;
+}
 .btn__com {
   @include btn__explo;
   width: 200px;
   height: 50px;
-  margin: 10px 100px 10px 100px;
+margin: 20px;
 }
 
+
+
+// Media querys@**************************************
+// Media querys@**************************************
 // Media querys@**************************************
 
 @media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 60px;
+  }
+
+  .recherche {
+    .recherche--haut {
+      height: 100px;
+
+      i {
+        width: 100px;
+        font-size: 30px;
+      }
+
+      input {
+        height: 50px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .recherche--bas {
+      button {
+        width: 300px;
+        height: 70px;
+        font-size: 20px;
+      }
+    }
+  }
+
   .fonctionnement h2 {
     text-align: center;
     font-size: 30px;
@@ -460,6 +513,40 @@ footer {
         color: $color2-pink;
         font-size: 22px;
       }
+    }
+  }
+
+  .header__titre {
+    justify-content: center;
+
+    a {
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    h1 a {
+      font-size: 60px;
+    }
+  }
+
+  //-- Main -->
+
+  main {
+    .all-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .menu-ligne {
+      width: 450px;
+    }
+
+  
+    .btn__com {
+      width: 300px;
+      height: 80px;
+      margin: 50px;
     }
   }
 }

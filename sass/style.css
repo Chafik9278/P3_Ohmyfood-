@@ -17,6 +17,8 @@ h1 {
 }
 
 /***** Partie 1 Recherche *****/
+/***** Partie 1 Recherche *****/
+/***** Partie 1 Recherche *****/
 .header__title {
   text-align: center;
 }
@@ -80,6 +82,8 @@ h1 {
 }
 
 /***** Partie 2 Fonctionnement *****/
+/***** Partie 2 Fonctionnement *****/
+/***** Partie 2 Fonctionnement *****/
 .fonctionnement h2 {
   margin-left: 30px;
 }
@@ -101,8 +105,8 @@ h1 {
 
 .fonctionnement li:hover {
   background: #f2eafb;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
   color: #9356dc;
 }
 
@@ -143,6 +147,8 @@ h1 {
   margin-left: 20px;
 }
 
+/***** Partie 3 Resto *****/
+/***** Partie 3 Resto *****/
 /***** Partie 3 Resto *****/
 .resto h2 {
   margin-left: 20px;
@@ -208,6 +214,9 @@ h1 {
   margin: 0 10px;
 }
 
+/***** Partie COEUR *****/
+/***** Partie COEUR *****/
+/***** Partie COEUR *****/
 .fa-heart {
   font-size: 30px;
   color: black;
@@ -223,6 +232,8 @@ h1 {
   margin: 0 10px;
 }
 
+/***** Footer *****/
+/***** Footer *****/
 /***** Footer *****/
 footer {
   background-color: #353535;
@@ -272,10 +283,17 @@ footer .fa-hands-helping {
 .main__img {
   width: 100%;
   height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .main__menu {
-  background-color: #f1f1f1;
+  background-color: #f6f6f6;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  position: relative;
+  margin-top: -50px;
 }
 
 .menu__title {
@@ -328,8 +346,8 @@ footer .fa-hands-helping {
 }
 
 .menu-ligne:hover .fa-check-circle {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .menu-ligne h4 {
@@ -370,7 +388,7 @@ footer .fa-hands-helping {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   width: 50px;
   height: 60px;
   border-radius: 0px 15px 15px 0px;
@@ -392,6 +410,10 @@ footer .fa-hands-helping {
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
+.aligne-btn {
+  text-align: center;
+}
+
 .btn__com {
   background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
@@ -405,7 +427,7 @@ footer .fa-hands-helping {
   cursor: pointer;
   width: 200px;
   height: 50px;
-  margin: 10px 100px 10px 100px;
+  margin: 20px;
 }
 
 .btn__com:hover {
@@ -416,6 +438,26 @@ footer .fa-hands-helping {
 }
 
 @media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 60px;
+  }
+  .recherche .recherche--haut {
+    height: 100px;
+  }
+  .recherche .recherche--haut i {
+    width: 100px;
+    font-size: 30px;
+  }
+  .recherche .recherche--haut input {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  .recherche .recherche--bas button {
+    width: 300px;
+    height: 70px;
+    font-size: 20px;
+  }
   .fonctionnement h2 {
     text-align: center;
     font-size: 30px;
@@ -477,6 +519,36 @@ footer .fa-hands-helping {
   footer li a:hover {
     color: #ff79da;
     font-size: 22px;
+  }
+  .header__titre {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header__titre a {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .header__titre h1 a {
+    font-size: 60px;
+  }
+  main .all-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .menu-ligne {
+    width: 450px;
+  }
+  main .btn__com {
+    width: 300px;
+    height: 80px;
+    margin: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */
