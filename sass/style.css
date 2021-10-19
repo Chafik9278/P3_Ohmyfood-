@@ -221,15 +221,18 @@ h1 {
 /***** Partie COEUR *****/
 /***** Partie COEUR *****/
 /***** Partie COEUR *****/
-.far {
-  color: black;
-  cursor: pointer;
-  font-size: 30px;
+.fas {
+  color: linear-gradient(to bottom right, #ff79da, #9356dc);
+  opacity: 0;
 }
 
-.far:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+.coeur {
+  color: black;
+  cursor: pointer;
+}
+
+.coeur:hover {
+  opacity: 0;
 }
 
 /***** Partie COEUR *****/
@@ -311,6 +314,11 @@ footer .fa-hands-helping {
   padding: 0 10px;
 }
 
+.entrees {
+  -webkit-animation: visible 2s;
+          animation: visible 2s;
+}
+
 .entrees__titre {
   margin-left: 10px;
 }
@@ -322,14 +330,19 @@ footer .fa-hands-helping {
   width: 80px;
 }
 
+.plats {
+  -webkit-animation: visible 4s;
+          animation: visible 4s;
+}
+
 .ligne-verte {
   width: 40px;
   border: 2px solid #99e2d0;
   margin-left: 10px;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 .menu-ligne {
@@ -419,6 +432,11 @@ footer .fa-hands-helping {
   transition: -webkit-transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.dessert {
+  -webkit-animation: visible 6s;
+          animation: visible 6s;
 }
 
 .aligne-btn {
@@ -577,5 +595,52 @@ footer .fa-hands-helping {
     height: 80px;
     margin: 50px;
   }
+}
+
+@-webkit-keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.testcentre {
+  text-align: center;
+}
+
+.test1, .test2, .test3, .test4 {
+  font-size: 20px;
+  color: salmon;
+  -webkit-animation: visible 5s;
+          animation: visible 5s;
+}
+
+.test2 {
+  -webkit-animation: visible 15s;
+          animation: visible 15s;
+  background-color: royalblue;
+}
+
+.test3 {
+  -webkit-animation: visible 25s;
+          animation: visible 25s;
+  background-color: wheat;
+}
+
+.test4 {
+  -webkit-animation: visible 35s;
+          animation: visible 35s;
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */

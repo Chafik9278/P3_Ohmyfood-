@@ -167,11 +167,13 @@ h1 {
     margin: 20px;
     text-align: center;
     padding: 0 50px 50px;
+
   }
 }
 
 .btn__explo {
   @include btn__explo;
+
 }
 
 /***** Partie 2 Fonctionnement *****/
@@ -281,12 +283,20 @@ h1 {
 /***** Partie COEUR *****/
 /***** Partie COEUR *****/
 
-.far {
+
+.fas{
+  color: $linear-gradient;
+  opacity: 0;
+}
+
+.coeur{
+ 
   color: black;
   cursor: pointer;
-  font-size: 30px;
   &:hover {
-    background: $linear-gradient;
+    opacity: 0;
+
+   
   }
 }
 
@@ -319,7 +329,7 @@ footer {
 
   .fa-utensils {
     margin-right: 12px;
-    
+
   }
 
   .fa-hands-helping {
@@ -355,27 +365,43 @@ footer {
   padding: 0 10px;
 }
 
+.all-menu {
+
+
+}
+
+
+.entrees {
+  animation: visible 2s;
+}
+
 .entrees__titre {
   margin-left: 10px;
 
   &:hover + .ligne-verte  {
-   
+
     transform: rotate(180deg);
     border: 3px solid #e29999;
     width: 80px;
-    
+
 }
+}
+
+
+.plats {
+  animation: visible 4s;
 }
 
 .ligne-verte {
   width: 40px;
   border: 2px solid #99e2d0;
   margin-left: 10px;
-  transition: transform 500ms ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .menu-ligne {
   @include menu-ligne();
+
 }
 
 .menu-ligne h4 {
@@ -402,6 +428,10 @@ footer {
   @include encoche;
 }
 
+
+.dessert{
+  animation: visible 6s;
+}
 .aligne-btn {
   text-align: center;
 }
@@ -412,7 +442,7 @@ footer {
   margin: 20px;
 
   &:hover + .progress__bar {
-   
+
     transform: rotate(180deg);
 }
 }
@@ -551,4 +581,57 @@ footer {
       margin: 50px;
     }
   }
+}
+
+
+//*****************************
+//********Test animation keyframe*********************
+//*****************************
+
+
+@keyframes visible {
+  0% {
+    
+    opacity: 0;
+
+  }
+
+
+ 100% {
+ 
+    opacity: 1;
+  }
+}
+
+
+
+.testcentre{
+  text-align: center;
+}
+
+.test1{
+ font-size: 20px;
+ color: salmon;
+  animation: visible 5s;
+}
+
+.test2{
+ @extend .test1;
+ animation: visible 15s;
+ background-color: royalblue;
+
+}
+
+.test3{
+  @extend .test1;
+  animation: visible 25s;
+ background-color: wheat;
+
+}
+
+.test4{
+
+  @extend .test1;
+  animation: visible 35s;
+  background-color: red;
 }
