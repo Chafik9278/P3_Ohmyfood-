@@ -1,0 +1,37 @@
+
+
+.testcentre {
+    text-align: center;
+  }
+  
+  .test1 {
+    font-size: 20px;
+    color: salmon;
+    animation: visible 5s;
+  }
+  
+  .test2 {
+    @extend .test1;
+    animation: visible 15s;
+    background-color: royalblue;
+  }
+  
+  .test3 {
+    @extend .test1;
+    animation: visible 25s;
+    background-color: wheat;
+  }
+  
+  .test4 {
+    @extend .test1;
+    animation: visible 35s;
+    background-color: red;
+  }
+
+  .progress__bar {
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    height: 5px;
+    transition: transform 200ms ease-in-out;
+  }
