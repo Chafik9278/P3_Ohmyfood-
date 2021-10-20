@@ -87,6 +87,8 @@ h1 {
   margin-top: -50px;
 }
 
+//coeur*************
+
 //ANIMATION ENCOCHE*************
 
 @mixin menu-ligne {
@@ -167,13 +169,11 @@ h1 {
     margin: 20px;
     text-align: center;
     padding: 0 50px 50px;
-
   }
 }
 
 .btn__explo {
   @include btn__explo;
-
 }
 
 /***** Partie 2 Fonctionnement *****/
@@ -279,24 +279,40 @@ h1 {
 .decaler {
   margin: 0 10px;
 }
+
 /***** Partie COEUR *****/
 /***** Partie COEUR *****/
 /***** Partie COEUR *****/
 
-
-.fas{
-  color: $linear-gradient;
-  opacity: 0;
+.fa-heart {
+  font-size: 30px;
+  padding: 10px;
 }
 
-.coeur{
- 
+.coeur__plein {
+  color: blue;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+
+}
+
+.coeur__vide {
   color: black;
   cursor: pointer;
-  &:hover {
-    opacity: 0;
+ 
+}
 
-   
+.coeur {
+  position: relative;
+  cursor: pointer;
+
+  &:hover .coeur__vide {
+    opacity: 0;
+  }
+
+  &:hover .coeur__plein {
+    opacity: 1;
   }
 }
 
@@ -329,7 +345,6 @@ footer {
 
   .fa-utensils {
     margin-right: 12px;
-
   }
 
   .fa-hands-helping {
@@ -366,10 +381,7 @@ footer {
 }
 
 .all-menu {
-
-
 }
-
 
 .entrees {
   animation: visible 2s;
@@ -378,15 +390,12 @@ footer {
 .entrees__titre {
   margin-left: 10px;
 
-  &:hover + .ligne-verte  {
-
+  &:hover + .ligne-verte {
     transform: rotate(180deg);
     border: 3px solid #e29999;
     width: 80px;
-
+  }
 }
-}
-
 
 .plats {
   animation: visible 4s;
@@ -401,7 +410,6 @@ footer {
 
 .menu-ligne {
   @include menu-ligne();
-
 }
 
 .menu-ligne h4 {
@@ -428,13 +436,14 @@ footer {
   @include encoche;
 }
 
-
-.dessert{
+.dessert {
   animation: visible 6s;
 }
+
 .aligne-btn {
   text-align: center;
 }
+
 .btn__com {
   @include btn__explo;
   width: 200px;
@@ -442,20 +451,18 @@ footer {
   margin: 20px;
 
   &:hover + .progress__bar {
-
     transform: rotate(180deg);
+  }
 }
-}
 
-
-
-.progress__bar{
+.progress__bar {
   text-align: center;
   background-color: black;
-  width:100%;
+  width: 100%;
   height: 5px;
   transition: transform 200ms ease-in-out;
 }
+
 // Media querys@**************************************
 // Media querys@**************************************
 // Media querys@**************************************
@@ -583,54 +590,43 @@ footer {
   }
 }
 
-
 //*****************************
 //********Test animation keyframe*********************
 //*****************************
 
-
 @keyframes visible {
   0% {
-    
     opacity: 0;
-
   }
 
-
- 100% {
- 
+  100% {
     opacity: 1;
   }
 }
 
-
-
-.testcentre{
+.testcentre {
   text-align: center;
 }
 
-.test1{
- font-size: 20px;
- color: salmon;
+.test1 {
+  font-size: 20px;
+  color: salmon;
   animation: visible 5s;
 }
 
-.test2{
- @extend .test1;
- animation: visible 15s;
- background-color: royalblue;
-
+.test2 {
+  @extend .test1;
+  animation: visible 15s;
+  background-color: royalblue;
 }
 
-.test3{
+.test3 {
   @extend .test1;
   animation: visible 25s;
- background-color: wheat;
-
+  background-color: wheat;
 }
 
-.test4{
-
+.test4 {
   @extend .test1;
   animation: visible 35s;
   background-color: red;
