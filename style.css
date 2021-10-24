@@ -176,6 +176,10 @@ h3 {
   background-color: whitesmoke;
 }
 
+.card-resto:active .chargement {
+  opacity: 1;
+}
+
 .card-resto h3 {
   padding: 10px;
   margin: 0px;
@@ -338,8 +342,8 @@ footer .fa-hands-helping {
 }
 
 .entrees {
-  -webkit-animation: visible 2s;
-          animation: visible 2s;
+  -webkit-animation: visible 4s;
+          animation: visible 4s;
 }
 
 .entrees__titre:hover + .ligne-verte {
@@ -352,8 +356,8 @@ footer .fa-hands-helping {
 }
 
 .plats {
-  -webkit-animation: visible 4s;
-          animation: visible 4s;
+  -webkit-animation: visible 6s;
+          animation: visible 6s;
 }
 
 .ligne-verte {
@@ -456,8 +460,8 @@ footer .fa-hands-helping {
 }
 
 .dessert {
-  -webkit-animation: visible 6s;
-          animation: visible 6s;
+  -webkit-animation: visible 7s;
+          animation: visible 7s;
 }
 
 .btn__explo {
@@ -476,8 +480,8 @@ footer .fa-hands-helping {
 .btn__explo:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
-  -webkit-box-shadow: 5px 5px 5px  #000;
-          box-shadow: 5px 5px 5px  #000;
+  -webkit-box-shadow: 5px 5px 5px #000;
+          box-shadow: 5px 5px 5px #000;
   opacity: 0.8;
 }
 
@@ -500,8 +504,8 @@ footer .fa-hands-helping {
 .btn__com:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
-  -webkit-box-shadow: 5px 5px 5px  #000;
-          box-shadow: 5px 5px 5px  #000;
+  -webkit-box-shadow: 5px 5px 5px #000;
+          box-shadow: 5px 5px 5px #000;
   opacity: 0.8;
 }
 
@@ -655,5 +659,45 @@ footer .fa-hands-helping {
   transition: -webkit-transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.bacol__chargement {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.chargement {
+  border: 10px solid whitesmoke;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 10px solid blue;
+  border-bottom: 10px solid red;
+  -webkit-animation: loader 1s linear infinite;
+          animation: loader 1s linear infinite;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
