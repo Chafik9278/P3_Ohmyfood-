@@ -256,9 +256,10 @@ h3 {
 
 .card-resto {
   @include card;
-  &:active .chargement{
+
+  &:active .chargement {
     opacity: 1;
-   
+
   }
 
   h3 {
@@ -461,7 +462,7 @@ footer {
   height: 50px;
   margin: 20px;
 
-  &:active+.progress__bar {
+  &:active+.barre{
     transform: translate(0, -15px);
   }
 }
@@ -593,16 +594,29 @@ footer {
       }
     }
 
+    
     .btn__com {
       width: 300px;
       height: 80px;
       margin: 50px;
 
-      &:active+.progress__bar {
+      &:active+.barre {
         transform: translate(0, -50px);
+        
+        
       }
+    
     }
+    .barre {
+      text-align: center;
+      background-color: blue;
+      width: 100%;
+      height: 1px;
+      transition: transform 200ms ease-in-out;
+    }
+  
   }
+ 
 }
 
 /***** partie test***/
@@ -611,20 +625,14 @@ footer {
 
 .entrees__titre {
   &:hover+.ligne-verte {
-    // transform: rotate(360deg);
+
     transform: translate(5px, -5px);
     border: 2px solid #e29999;
     width: 40px;
   }
 }
 
-.progress__bar {
-  text-align: center;
-  background-color: $color2-pink;
-  width: 100%;
-  height: 1px;
-  transition: transform 200ms ease-in-out;
-}
+
 
 // .testcentre {
 //     text-align: center;
@@ -654,34 +662,74 @@ footer {
 //     background-color: red;
 //   }
 
-.bacol__chargement {
-  background-color: $color3-green;
-  position: absolute;
-  top: 25%;
-  left: 25%;
-
-}
 .chargement {
 
-  border: 10px solid whitesmoke;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border-top: 10px solid blue;
-  border-bottom: 10px solid red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $linear-gradient;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
- 
-  animation: loader 1s linear infinite;
-
+  animation: visible 5s linear infinite reverse;
 
 }
 
-@keyframes loader {
+.chargement__animation {
+
+  border: 10px solid whitesmoke;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border-top: 10px solid $color1-purple;
+  border-bottom: 10px solid $color2-pink;
+  border-left: 10px solid whitesmoke;
+  border-right: 10px solid $color3-green;
+  background-color: $color3-green;
+
+  animation: rotate 2s linear infinite;
+
+  h1 {
+
+    text-align: center;
+    padding-top: 35%;
+
+  }
+
+}
+
+@keyframes rotate {
   0% {
     transform: rotate(0deg);
+    background-color: $color1-purple;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    background-color: $color3-green;
   }
 
   100% {
     transform: rotate(360deg);
+    background-color: $color2-pink;
   }
+}
+
+
+@keyframes decalage__droite {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.header__title {
+
+  animation: decalage__droite 6s ease-out;
+
+
 }
